@@ -2,9 +2,9 @@
 import { getCollection } from "astro:content";
 // const allPosts = await Astro.glob("../pages/posts/*.md");
 const allPosts = await getCollection("posts");
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "My Astro Learning Blog";
-import BlogPost from "../components/BlogPost.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const pageTitle = "Mi blog aprendiendo Astro";
+import BlogPost from "../../components/BlogPost.astro";
 ---
 
 <html lang="en">
@@ -17,7 +17,7 @@ import BlogPost from "../components/BlogPost.astro";
   </head>
   <body>
     <BaseLayout pageTitle={pageTitle}>
-      <p>This is where I will post about my journey learning Astro.</p>
+      <p>Este es mi blog de Astro.</p>
       <ul>
         {
           allPosts.map((post) => {
